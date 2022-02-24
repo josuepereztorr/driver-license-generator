@@ -119,15 +119,11 @@ public class FirstNameUtility {
         middleInitialCodeMap.put("Z", 19);
     }
 
-    public int encodeFirstName(String firstName, String middleInitial) {
+    public int encodeFirstName(String firstName, String middleInitial) throws MissingNameException {
 
         // if firstName is blank, throw a MissingNameException
         if (firstName.isBlank()) {
-            try {
-                throw new MissingNameException(firstName);
-            } catch (MissingNameException e) {
-                    e.printStackTrace();
-            }
+            throw new MissingNameException(firstName);
         }
 
         // if firstName appears in the first name map, return the sum of the codes for firstName and middleInitial
