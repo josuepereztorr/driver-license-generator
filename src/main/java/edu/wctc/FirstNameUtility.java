@@ -132,14 +132,14 @@ public class FirstNameUtility {
             if (middleInitial.isBlank())
                 return firstNameCodeMap.get(firstName);
             else
-                return firstNameCodeMap.get(firstName) + middleInitialCodeMap.get(middleInitial);
+                return firstNameCodeMap.get(firstName) + middleInitialCodeMap.get(middleInitial.toUpperCase());
         } else {
             // else firstName is not in the first map, return the sum of the codes for the firstInitial and middleInitial
             // unless the person does not have a middleInitial then return only the firstName code
             if (middleInitial.isBlank())
                 return firstInitialCodeMap.get(String.valueOf(firstName.charAt(0)));
             else
-                return firstInitialCodeMap.get(String.valueOf(firstName.charAt(0))) + middleInitialCodeMap.get(middleInitial);
+                return firstInitialCodeMap.get(String.valueOf(firstName.charAt(0))) + middleInitialCodeMap.get(middleInitial.toUpperCase());
         }
     }
 }
