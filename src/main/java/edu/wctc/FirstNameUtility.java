@@ -133,7 +133,6 @@ public class FirstNameUtility {
                 return firstNameCodeMap.get(firstName);
             else
                 return firstNameCodeMap.get(firstName) + middleInitialCodeMap.get(middleInitial);
-
         } else {
             // else firstName is not in the first map, return the sum of the codes for the firstInitial and middleInitial
             // unless the person does not have a middleInitial then return only the firstName code
